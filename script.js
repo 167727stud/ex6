@@ -13,7 +13,7 @@
 }
     if(isNaN(ex2_text.value))
     {
-      console.log("Numer Telefonu może tylko zawierać cyfry")
+      console.log("Numer Telefonu może tylko zawierać cyf ry")
     }
     if(ex2_text.value.length == 9 && !(isNaN(ex2_text.value)))
     {
