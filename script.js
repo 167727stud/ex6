@@ -13,7 +13,7 @@
 }
     if(isNaN(ex2_text.value))
     {
-      console.log("Numer Telefonu może tylko zawierać cyf ry")
+      console.log("Numer Telefonu może tylko zawierać cyfry")
     }
     if(ex2_text.value.length == 9 && !(isNaN(ex2_text.value)))
     {
@@ -23,3 +23,14 @@
     
 })
                             })();
+function allowDrop(ex3) {
+  ex3.preventDefault();
+}
+function drag(ex3) {
+  ex3.dataTransfer.setData("text", ex3.target.id);
+}
+function drop(ex3) {
+  ex3.preventDefault();
+  var dane = ex3.dataTransfer.getData("text");
+  ex3.target.appendChild(document.getElementById(dane));
+}
